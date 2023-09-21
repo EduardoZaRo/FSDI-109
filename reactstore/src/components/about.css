@@ -1,0 +1,13 @@
+.about{
+    background-color:lightgreen;
+    border:1px solid #333;
+}
+
+.about h3{
+    margin-top:20px;
+    margin-bottom:5px;
+}
+
+.about h5{
+    font-size:20px;
+}

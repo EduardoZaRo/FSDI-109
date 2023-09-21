@@ -1,0 +1,10 @@
+.home{
+    padding:40px 20px;
+    background-color:rgba(0, 128, 0, 0.419);
+}
+.home h1{
+    color:#444;
+}
+.home h4{
+    font-style:italic;
+}

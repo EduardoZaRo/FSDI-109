@@ -1,0 +1,9 @@
+.qt-picker{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    margin: 20px 0;
+    /* display:inline-block;
+    margin:0 5px;
+    font-weight:600; */
+}

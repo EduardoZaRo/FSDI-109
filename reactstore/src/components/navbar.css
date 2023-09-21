@@ -1,0 +1,83 @@
+.navbarcomponent{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background:green;
+    min-height:60px;
+    position:sticky;
+    top: 0px;
+    z-index:999;
+    
+}
+
+.navbarcomponent h1,
+.navbarcomponent nav > a{
+    color:white;
+}
+
+.navbarcomponent h2{
+    text-align:center;
+}
+.navbarcomponent > h1{
+    width:40%;
+    text-align:center;
+}
+.navbarcomponent nav{
+    display:flex;
+    gap:60px;
+    padding:0 50px;
+}
+.navbarcomponent i{
+    padding-right:10px;
+}
+
+.navbarcomponent a{
+    text-decoration:none;
+    text-align:center;
+    color:blue;
+}
+
+@media(max-width:500px){
+    .navbarcomponent > h1{
+        display:none;
+    }
+    .navbarcomponent .menu{
+        width:100%;
+    }
+}
+
+@media(min-width:768px){
+    .navbarcomponent .header-nav{
+        display:block;
+        display:flex;
+        
+    }
+    .navbarcomponent .navbar{
+        display:none;
+    }
+}
+@media(max-width:768px){
+    .navbarcomponent h1,
+    .navbarcomponent .header-nav{
+        display:none;
+    }
+    
+
+    .navbarcomponent .navbar{
+        padding:20px;
+        display:block;
+        width:100%;
+        background-color:green!important;
+    }
+    .navbarcomponent nav a{
+        color:white!important;
+    }
+    .navbarcomponent .nav-item{
+        padding:10px 20px;
+    }
+    .navbarcomponent button.navbar-toggler.collapsed, 
+    .navbarcomponent button.navbar-toggler{
+        background:white;
+        border:1px solid white;
+    }
+}
