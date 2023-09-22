@@ -8,6 +8,7 @@ function Navbar() {
                 <Link to="/">Home</Link>
                 <Link to="/catalog">Catalog</Link>
                 <Link to="/about">About</Link>
+                <Link to="/admin">Admin</Link>
                 <Link to="/cart">Cart</Link>
             </nav>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,6 +27,9 @@ function Navbar() {
                             </li>
                             <li className="nav-item">
                                 <Link to="/about">About</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/admin">Admin</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/cart">Cart</Link>

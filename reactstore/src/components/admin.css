@@ -1,0 +1,26 @@
+.admin{
+    background-color:lightgreen;
+    padding-bottom:20px;
+}
+
+.admin .forms-container{
+    display:flex;
+    justify-content:space-around;
+}
+
+.admin .title{
+    text-align:center;
+    color:darkslategray;
+    margin:0;
+    font-weight:bold;
+}
+.admin form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    min-width:400px;
+}
+
+.admin label{
+    margin-bottom:5px;
+}

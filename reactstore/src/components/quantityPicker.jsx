@@ -19,9 +19,9 @@ function QuantityPicker({sharedQuantity}) {
     return (
         <div className="qt-picker">
             {/* 2 buttons and  a label*/}
-            <button className="btn btn-sm btn-primary" disabled={quantity===1} onClick={decrease}>-</button>
+            <button className="btn btn-sm btn-success" disabled={quantity===1} onClick={decrease}>-</button>
             <label>{quantity}</label>
-            <button className="btn btn-sm btn-primary" onClick={increase}>+</button>
+            <button className="btn btn-sm btn-success" onClick={increase}>+</button>
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import './App.css';
 import About from './components/about';
+import Admin from './components/admin';
 import Cart from './components/cart';
 
 import Footer from './components/footer';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/catalog" element={<Catalog/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/admin" element={<Admin/>}/>
           <Route path="/cart" element={<Cart/>}/>
         </Routes>
 
