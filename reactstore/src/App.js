@@ -10,24 +10,29 @@ import Catalog from './pages/catalog';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
+import GlobalState from './state/globalState';
+
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar/>
+      <GlobalState>
+        <BrowserRouter>
+          <Navbar/>
 
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/catalog" element={<Catalog/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/admin" element={<Admin/>}/>
-          <Route path="/cart" element={<Cart/>}/>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/catalog" element={<Catalog/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/admin" element={<Admin/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+          </Routes>
 
-        <Footer/>
-      </BrowserRouter>
+          <Footer/>
+        </BrowserRouter>
+      </GlobalState>
+
     </div>
   );
 }
