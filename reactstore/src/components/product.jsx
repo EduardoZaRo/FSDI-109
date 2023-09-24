@@ -4,14 +4,24 @@ import QuantityPicker from './quantityPicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 function Product(props){
-    const [qty, setQty] = useState(1);
+    const [quantity, setQuantity] = useState(1);
     useEffect(function(){
         console.log("component loaded");
     },[]);
-    function sharedQuantity(pickerQty){
-        setQty(pickerQty);
-        console.log(qty)
+
+    function onQuantityChange(value){
+        setQuantity(value);
     }
+
+    function getTotal(){
+        const total = quantity * props.data.price;
+        return total.toFixed(2);
+    }
+
+    function handleAdd(){
+        console.log("handleAdd")
+    }
+
     return(
         <div className="product">
             <div className="product-img-container">
@@ -23,13 +33,14 @@ function Product(props){
                 <label><strong>Total</strong> </label>
             </div>
             <div className="prices-container">
-                <label>{props.data.price.toFixed(2)}$</label>
-                <label><strong></strong> {(qty*props.data.price).toFixed(2)}$</label>
+                <label className="price">{props.data.price.toFixed(2)}$</label>
+                <label className="total"><strong></strong> {getTotal()}$</label>
             </div>
 
             <h5>{props.data.title}</h5>
-            <QuantityPicker sharedQuantity={sharedQuantity}/>
-            <button className="add-btn">Add to <FontAwesomeIcon icon={faCartShopping}/></button>
+            <QuantityPicker onChange={onQuantityChange}/>
+
+            <button onClick={handleAdd} className="add-btn">Add to <FontAwesomeIcon icon={faCartShopping}/></button>
         </div>
     );
 }

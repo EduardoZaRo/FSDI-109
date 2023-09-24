@@ -1,19 +1,19 @@
 import "./quantityPicker.css";
 import {useState} from "react";
 
-function QuantityPicker({sharedQuantity}) {
+function QuantityPicker(props) {
     //    var           fn
     let [quantity, setQuantity] = useState(1);
     function decrease(){
         if(quantity === 1) return;
         let val = quantity - 1;
         setQuantity(val);
-        sharedQuantity(val);
+        props.onChange(val);
     }
     function increase(){
         let val = quantity + 1;
         setQuantity(val);
-        sharedQuantity(val);
+        props.onChange(val);
     }
     
     return (
