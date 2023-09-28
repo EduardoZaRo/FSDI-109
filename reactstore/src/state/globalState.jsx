@@ -9,8 +9,15 @@ function GlobalState(props){
 
     })
 
-    function addProductToCart(){
-        console.log("global add")
+    function addProductToCart(prod){
+        console.log("xd")
+        //create a copy
+        let copy = [...cart];
+        //modify the copy
+        copy.push(prod);
+        //set the copy back
+        setCart(copy);
+        alert(prod.title + " added to cart");
     }
     function removeProductFromCart(){
         console.log("global remove")

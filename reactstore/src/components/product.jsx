@@ -3,8 +3,15 @@ import './product.css';
 import QuantityPicker from './quantityPicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
+import {useContext} from 'react';
+import StoreContext from '../state/storeContext';
+
 function Product(props){
     const [quantity, setQuantity] = useState(1);
+
+    const addProductToCart = useContext(StoreContext).addProductToCart;
+
     useEffect(function(){
         console.log("component loaded");
     },[]);
@@ -19,7 +26,10 @@ function Product(props){
     }
 
     function handleAdd(){
-        console.log("handleAdd")
+        // JS spread  operator
+        let prodForCart = {...props.data};
+        prodForCart.quantity = quantity;
+        addProductToCart(prodForCart);
     }
 
     return(
@@ -46,3 +56,14 @@ function Product(props){
 }
 
 export default Product;
+
+/**
+ * Create CarProduct component
+ * 
+ * cart should render to cartProduct instead of li
+ *  -should pass data
+ * 
+ * Cart product should receive props and render information
+ * 
+ * 
+ */
